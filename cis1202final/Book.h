@@ -5,7 +5,7 @@ using namespace std;
 #include <string>
 
 enum Genres { NONE, FANTASY, SCIFI, HORROR };
-enum Subgenres { NA, EPIC, SWORD_SCORCERY, SPACE_OPERA };
+enum Subgenres { NA, EPIC, SWORD_SCORCERY, SPACE_OPERA, CYBERPUNK };
 class Book
 {
 protected:

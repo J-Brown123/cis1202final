@@ -35,9 +35,23 @@ void Comp::setInfo()
 	cout << "Which genre?\n";
 	Book::showGenres();
 	cin >> intGen;
+	while (intGen < 0 || intGen > 3)
+	{
+		cout << "Invalid response.\n";
+		cout << "Which genre?\n";
+		Book::showGenres();
+		cin >> intGen;
+	}
 	cout << "Which subgenre?\n";
 	Book::showSubs();
 	cin >> intSub;
+	while (intSub < 0 || intSub > 4)
+	{
+		cout << "Invalid response.\n";
+		cout << "Which subgenre?\n";
+		Book::showSubs();
+		cin >> intSub;
+	}
 	newGen = static_cast<Genres>(intGen);
 	newSub = static_cast<Subgenres>(intSub);
 	Comp::storeInfo(name, writer, series, newGen, newSub, pgs, story);

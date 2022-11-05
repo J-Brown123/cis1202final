@@ -82,7 +82,6 @@ int main()
 			cout << endl;
 			break;
 		case 2: displayLibrary(nov, com, num1, num2);
-			cout << endl;
 			break;
 		case 3: {
 			cout << "Type the title to search for:\n";
@@ -197,7 +196,6 @@ int main()
 				break;
 			}
 		case 6: dataMenu(nov, com, num1, num2);
-			cout << endl;
 			break;
 		case 7: cout << "Exiting.\n";
 			file1.close();
@@ -260,8 +258,11 @@ void displayLibrary(Novel novs[], Comp comps[], int val1, int val2)
 			cout << setw(11) << "Subgenre:" << "Sword and Sorcery" << endl;
 		else if (novs[i].getSub() == 3)
 			cout << setw(11) << "Subgenre:" << "Space Opera" << endl;
+		else if (novs[i].getSub() == 4)
+			cout << setw(11) << "Subgenre:" << "Cyberpunk" << endl;
 		cout << endl;
 	}
+	cout << endl;
 
 	cout << "The compilations in the library are:\n";
 	for (int i = 0; i < val2; i++)
@@ -289,8 +290,11 @@ void displayLibrary(Novel novs[], Comp comps[], int val1, int val2)
 			cout << setw(11) << "Subgenre:" << "Sword and Sorcery" << endl;
 		else if (comps[i].getSub() == 3)
 			cout << setw(11) << "Subgenre:" << "Space Opera" << endl;
+		else if (comps[i].getSub() == 4)
+			cout << setw(11) << "Subgenre:" << "Cyberpunk" << endl;
 		cout << endl;
 	}
+	cout << endl;
 	return;
 }
 
