@@ -49,6 +49,8 @@ int main()
 		file2.close();
 	}
 
+	//Output formatting
+	cout << fixed << showpoint << setprecision(2);
 
 	//Main Menu and Switch
 	do
@@ -347,7 +349,7 @@ void inputLibrary(Novel novs[], Comp comps[], int &val1, int &val2, fstream& fil
 	val1 = 0;
 	val2 = 0;
 	file1.read(reinterpret_cast<char*>(&novs[val1]), sizeof(novs[val1]));
-	while (file1 && val1 < SIZE)
+	while (!file1.eof() && val1 < SIZE)
 	{
 		val1++;
 		file1.read(reinterpret_cast<char*>(&novs[val1]), sizeof(novs[val1]));
@@ -357,7 +359,7 @@ void inputLibrary(Novel novs[], Comp comps[], int &val1, int &val2, fstream& fil
 		file2.clear(ios::eofbit);
 	file2.seekg(0, ios::beg);
 	file2.read(reinterpret_cast<char*>(&comps[val2]), sizeof(comps[val2]));
-	while (file2 && val2 < SIZE)
+	while (!file2.eof() && val2 < SIZE)
 	{
 		val2++;
 		file2.read(reinterpret_cast<char*>(&comps[val2]), sizeof(comps[val2]));
