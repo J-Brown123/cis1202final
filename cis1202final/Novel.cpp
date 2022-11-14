@@ -3,9 +3,21 @@
 
 Novel::Novel()
 {
-	Book::Book();
 	chapters = 0;
 	return;
+}
+
+void Novel::erase()
+{
+	title = " ";
+	author = " ";
+	series = " ";
+	pages = 0;
+	genre = NONE;
+	sub = NA;
+	chapters = 0;
+	return;
+
 }
 
 void Novel::storeInfo(string tempTitle, string tempAuth, string tempSeries, Genres tempGen, Subgenres tempSub, int tempPgs, int tempChaps)

@@ -9,6 +9,7 @@ private:
 	int chapters;
 public:
 	Novel();
+	void erase();
 	int getChapters()
 	{return chapters;}
 	void setInfo();

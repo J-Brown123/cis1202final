@@ -237,31 +237,31 @@ void displayLibrary(Novel novs[], Comp comps[], int val1, int val2)
 	cout << "The novels in the library are:\n";
 	for (int i = 0; i < val1; i++)
 	{
-		cout << setw(11) << "Title:" << novs[i].getTitle() << endl;
-		cout << setw(11) << "Author:" << novs[i].getAuthor() << endl;
-		cout << setw(11) << "Series:" << novs[i].getSeries() << endl;
-		cout << setw(11) <<  "Pages:" << novs[i].getPages() << endl;
-		cout << setw(11) << "Chapters:" << novs[i].getChapters() << endl;
+		cout << setw(11) << "Title: " << novs[i].getTitle() << endl;
+		cout << setw(11) << "Author: " << novs[i].getAuthor() << endl;
+		cout << setw(11) << "Series: " << novs[i].getSeries() << endl;
+		cout << setw(11) <<  "Pages: " << novs[i].getPages() << endl;
+		cout << setw(11) << "Chapters: " << novs[i].getChapters() << endl;
 		
 		if (novs[i].getGenre() == 0)
-			cout << setw(11) << "Genre:" << "There is no genre" << endl;
+			cout << setw(11) << "Genre: " << "There is no genre" << endl;
 		else if (novs[i].getGenre() == 1)
-			cout << setw(11) << "Genre:" << "Fantasy" << endl;
+			cout << setw(11) << "Genre: " << "Fantasy" << endl;
 		else if (novs[i].getGenre() == 2)
-			cout << setw(11) << "Genre:" << "Sci-Fi" << endl;
+			cout << setw(11) << "Genre: " << "Sci-Fi" << endl;
 		else if (novs[i].getGenre() == 3)
-			cout << setw(11) << "Genre:" << "Horror" << endl;
+			cout << setw(11) << "Genre: " << "Horror" << endl;
 
 		if (novs[i].getSub() == 0)
-			cout << setw(11) << "Subgenre:" << "There is no subgenre" << endl;
+			cout << setw(11) << "Subgenre: " << "There is no subgenre" << endl;
 		else if (novs[i].getSub() == 1)
-			cout << setw(11) << "Subgenre:" << "Epic Fantasy" << endl;
+			cout << setw(11) << "Subgenre: " << "Epic Fantasy" << endl;
 		else if (novs[i].getSub() == 2)
-			cout << setw(11) << "Subgenre:" << "Sword and Sorcery" << endl;
+			cout << setw(11) << "Subgenre: " << "Sword and Sorcery" << endl;
 		else if (novs[i].getSub() == 3)
-			cout << setw(11) << "Subgenre:" << "Space Opera" << endl;
+			cout << setw(11) << "Subgenre: " << "Space Opera" << endl;
 		else if (novs[i].getSub() == 4)
-			cout << setw(11) << "Subgenre:" << "Cyberpunk" << endl;
+			cout << setw(11) << "Subgenre: " << "Cyberpunk" << endl;
 		cout << endl;
 	}
 	cout << endl;
@@ -269,31 +269,31 @@ void displayLibrary(Novel novs[], Comp comps[], int val1, int val2)
 	cout << "The compilations in the library are:\n";
 	for (int i = 0; i < val2; i++)
 	{
-		cout << setw(11) << "Title:" << comps[i].getTitle() << endl;
-		cout << setw(11) << "Author:" << comps[i].getAuthor() << endl;
-		cout << setw(11) << "Series:" << comps[i].getSeries() << endl;
-		cout << setw(11) << "Pages:" << comps[i].getPages() << endl;
-		cout << setw(11) << "Chapters:" << comps[i].getStories() << endl;
+		cout << setw(11) << "Title: " << comps[i].getTitle() << endl;
+		cout << setw(11) << "Author: " << comps[i].getAuthor() << endl;
+		cout << setw(11) << "Series: " << comps[i].getSeries() << endl;
+		cout << setw(11) << "Pages: " << comps[i].getPages() << endl;
+		cout << setw(11) << "Chapters: " << comps[i].getStories() << endl;
 		
 		if (comps[i].getGenre() == 0)
-			cout << setw(11) << "Genre:" << "There is no genre" << endl;
+			cout << setw(11) << "Genre: " << "There is no genre" << endl;
 		else if (comps[i].getGenre() == 1)
-			cout << setw(11) << "Genre:" << "Fantasy" << endl;
+			cout << setw(11) << "Genre: " << "Fantasy" << endl;
 		else if (comps[i].getGenre() == 2)
-			cout << setw(11) << "Genre:" << "Sci-Fi" << endl;
+			cout << setw(11) << "Genre: " << "Sci-Fi" << endl;
 		else if (comps[i].getGenre() == 3)
-			cout << setw(11) << "Genre:" << "Horror" << endl;
+			cout << setw(11) << "Genre: " << "Horror" << endl;
 
 		if (comps[i].getSub() == 0)
-			cout << setw(11) << "Subgenre:" << "There is no subgenre" << endl;
+			cout << setw(11) << "Subgenre: " << "There is no subgenre" << endl;
 		else if (comps[i].getSub() == 1)
-			cout << setw(11) << "Subgenre:" << "Epic Fantasy" << endl;
+			cout << setw(11) << "Subgenre: " << "Epic Fantasy" << endl;
 		else if (comps[i].getSub() == 2)
-			cout << setw(11) << "Subgenre:" << "Sword and Sorcery" << endl;
+			cout << setw(11) << "Subgenre: " << "Sword and Sorcery" << endl;
 		else if (comps[i].getSub() == 3)
-			cout << setw(11) << "Subgenre:" << "Space Opera" << endl;
+			cout << setw(11) << "Subgenre: " << "Space Opera" << endl;
 		else if (comps[i].getSub() == 4)
-			cout << setw(11) << "Subgenre:" << "Cyberpunk" << endl;
+			cout << setw(11) << "Subgenre: " << "Cyberpunk" << endl;
 		cout << endl;
 	}
 	cout << endl;
@@ -338,8 +338,8 @@ void inputLibrary(Novel novs[], Comp comps[], int &val1, int &val2, fstream& fil
 	//Clear arrays
 	for (int i = 0; i < SIZE; i++)
 	{
-		novs[i].Novel::Novel();
-		comps[i].Comp::Comp();
+		novs[i].erase();
+		comps[i].erase();
 	}
 
 	//Input file data into arrays

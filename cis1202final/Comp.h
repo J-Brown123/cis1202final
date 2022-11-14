@@ -9,6 +9,7 @@ private:
 	int stories;
 public:
 	Comp();
+	void erase();
 	int getStories()
 	{return stories;}
 	void setInfo();

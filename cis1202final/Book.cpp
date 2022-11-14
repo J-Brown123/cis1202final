@@ -7,8 +7,8 @@ Book::Book()
 	author = " ";
 	series = " ";
 	pages = 0;
-	genre = Genres::NONE;
-	sub = Subgenres::NA;
+	genre = NONE;
+	sub = NA;
 	return;
 }
 

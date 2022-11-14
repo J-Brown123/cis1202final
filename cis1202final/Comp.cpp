@@ -3,7 +3,6 @@
 
 Comp::Comp()
 {
-	Book::Book();
 	stories = 0;
 	return;
 }
@@ -12,6 +11,18 @@ void Comp::storeInfo(string tempTitle, string tempAuth, string tempSeries, Genre
 {
 	Book::storeInfo(tempTitle, tempAuth, tempSeries, tempGen, tempSub, tempPgs);
 	stories = tempStory;
+	return;
+}
+
+void Comp::erase()
+{
+	title = " ";
+	author = " ";
+	series = " ";
+	pages = 0;
+	genre = NONE;
+	sub = NA;
+	stories = 0;
 	return;
 }
 
