@@ -335,6 +335,11 @@ void outputLibrary(Novel novs[], Comp comps[], int val1, int val2, fstream& file
 
 void inputLibrary(Novel novs[], Comp comps[], int &val1, int &val2, fstream& file1, fstream& file2)
 {
+	string tempTitle, tempAuthor, tempSeries;
+	Genres tempGen;
+	Subgenres tempSub;
+	int tempPages, tempChap;
+
 	//Clear arrays
 	for (int i = 0; i < SIZE; i++)
 	{
@@ -603,9 +608,9 @@ void findShortest(Novel novs[], Comp comps[], int val1, int val2)
 	}
 	cout << "The shortest novel in the library by pages is " << novs[index1].getTitle() << " with " << novs[index1].getPages() << " pages.\n";
 	cout << "The shortest compilation in the library by pages is " << comps[index2].getTitle() << " with " << comps[index2].getPages() << " pages.\n";
-	if (novs[index1].getPages() > comps[index2].getPages())
+	if (novs[index1].getPages() < comps[index2].getPages())
 		cout << novs[index1].getTitle() << " is the shortest work in the library by pages.\n";
-	else if (comps[index2].getPages() > novs[index1].getPages())
+	else if (comps[index2].getPages() < novs[index1].getPages())
 		cout << comps[index2].getTitle() << " is the shortest work in the library by pages.\n";
 	else
 		cout << novs[index1].getTitle() << " and " << comps[index2].getTitle() << " have the same number of pages, and are both the shortest.\n";
